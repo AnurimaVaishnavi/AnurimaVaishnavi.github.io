@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ranking - CoderBinge</title>
+	<link href="C:\Users\anuri\OneDrive\Desktop\18881A0531\fonts.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="https://img.atcoder.jp/public/7d95449/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\anuri\OneDrive\Desktop\18881A0531\base.css">
+</head>
+<body>
+<div id="main-div" class="float-container">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+				
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\home.html">Home</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\contest.html">Contest</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">Ranking</a></li>
+				
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\signup.html">Sign Up</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\signin.html">Sign In</a></li>	
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<form method="POST" name="form_logout" action="/logout?continue=https%3A%2F%2Fatcoder.jp%2Franking">
+		<input type="hidden" name="csrf_token" value="aMtgX9wMOUP9VEeCvQFK3tyN&#43;9oI28velW38SHm5Qqg=" />
+	</form>
+	<div id="main-container" class="container"
+		 	style="">
+		
+
+
+<br>
+<div class="row">
+	<div class="col-sm-12 col-md-10 col-md-offset-1">
+		<p>
+			<span class="h3">Ranking</span>
+			<span class="grey">
+				
+					Active Users
+					<span class='glyphicon glyphicon-question-sign' aria-hidden='true' data-html='true' data-toggle='tooltip' title="Users participated in a rated contest in recent 2 years"></span>
+				
+			</span>
+		</p>
+		<hr class="mt-0 mb-1">
+
+		<ul class="nav nav-pills small mb-1">
+			<li class="active"><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">Active Users</a></li>
+			<li ><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">All Users</a></li>
+		</ul>
+		
+
+		<div class="text-center">
+	<ul class="pagination pagination-sm mt-0 mb-1">
+			<li class="active"><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">1</a></li>
+			<li ><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\rankin2.html">2</a></li>
+	</ul>
+</div>
+<div class="panel panel-default panel-filter">
+			<div class="panel-heading">
+				<h3 class="panel-title filter-title" data-target="#form-filter"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Filter <span class="glyphicon pull-right"></span></h3>
+				<form class="form-inline form-filter" action="/ranking" id="form-filter" style="display:none;">
+					<hr>
+					
+					<div class="form-group form-group-sm">
+						<label for="f.Country">Country/Region: </label>
+						<select id="f.Country" class="form-control" style="width:150px;" data-placeholder="-" data-allow-clear="true" name="f.Country">
+							<option></option>
+							<option value="AF">Afghanistan</option>
+							<option value="AL">Albania</option>
+							<option value="HN">Honduras</option>
+							<option value="HK">Hong Kong</option>
+							<option value="HU">Hungary</option>
+							<option value="IS">Iceland</option>
+							<option value="IN">India</option>
+							<option value="ID">Indonesia</option>
+							<option value="IR">Iran</option>
+							<option value="IQ">Iraq</option>
+							<option value="IE">Ireland</option>
+							<option value="IL">Israel</option>
+							<option value="IT">Italy</option>
+							<option value="JP">Japan</option>
+							<option value="RO">Romania</option>
+							<option value="RU">Russia</option>
+							<option value="SM">San Marino</option>
+							<option value="ST">Sao Tome and Principe</option>
+							<option value="SS">South Sudan</option>
+							<option value="ES">Spain</option>
+							<option value="LK">Sri Lanka</option>
+							<option value="UG">Uganda</option>
+							<option value="UA">Ukraine</option>
+							<option value="AE">United Arab Emirates</option>
+							<option value="GB">United Kingdom</option>
+							<option value="US">United States of America</option>
+							<option value="XX">Other</option>
+						</select>
+					</div>
+					
+					<br>
+					<div class="form-group form-group-sm">
+						<table>
+							<tr><td><label>Birth Year: </label></td><td><input type='number' class='form-control' name='f.BirthYearLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.BirthYearUpperBound' value='9999'></td></tr>
+							<tr><td><label>Rating: </label></td><td><input type='number' class='form-control' name='f.RatingLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.RatingUpperBound' value='9999'></td></tr>
+							<tr><td><label>Highest Rating: </label></td><td><input type='number' class='form-control' name='f.HighestRatingLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.HighestRatingUpperBound' value='9999'></td></tr>
+							<tr><td><label>Rated Matches: </label></td><td><input type='number' class='form-control' name='f.CompetitionsLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.CompetitionsUpperBound' value='9999'></td></tr>
+							<tr><td><label>Win: </label></td><td><input type='number' class='form-control' name='f.WinsLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.WinsUpperBound' value='9999'></td></tr>
+						</table>
+					</div>
+					<br>
+					<div class="form-group">
+						<div>
+							<button type="submit" class="btn btn-primary btn-sm">Search</button>
+							<a class="btn btn-default btn-sm" href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">Reset</a>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="table-responsive">
+				<table class="table table-bordered table-striped th-center">
+					<thead>
+					<tr class="no-break">
+						<th width="4%"><a href="/ranking?desc=true&amp;orderBy=rank">Rank</a></th>
+						<th><a href="/ranking?orderBy=user_screen_name">User</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=birth_year">Birth</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=rating">Rating</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=highest_rating">Highest</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=competitions">Match</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=wins">Win</a></th>
+					</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="no-break">1</td>
+							<td><a href="/ranking?f.Country=BY"><img src="https://img.atcoder.jp/assets/flag/IN.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_champion.png"> <a href="/users/tourist" class="username"><span class="user-red">tourist</span></a>
+								<a href="/ranking?f.Affiliation=IIT&#43;Bombay"><span class="ranking-affiliation break-all">IIT Bombay</span></a></td>
+							<td>1994</td>
+							<td><b>4224</b></td>
+							<td><b>4229</b></td>
+							<td>43</td>
+							<td>21</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">2</td>
+							<td><a href="/ranking?f.Country=RU"><img src="https://img.atcoder.jp/assets/flag/AF.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/Um_nik" class="username"><span style="color:#08E8DE;">Um_nik</span></a>
+								<a href="/ranking?f.Affiliation=Nizhny&#43;Novgorod&#43;State&#43;University"><span class="ranking-affiliation break-all">Nizhny Novgorod State University</span></a></td>
+							<td>1996</td>
+							<td><b>3868</b></td>
+							<td><b>3919</b></td>
+							<td>46</td>
+							<td>6</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">3</td>
+							<td><a href="/ranking?f.Country=US"><img src="https://img.atcoder.jp/assets/flag/US.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/ecnerwala" class="username"><span class="user-red">abcd</span></a>
+								<a href="/ranking?f.Affiliation="><span class="ranking-affiliation break-all"></span></a></td>
+							<td>1997</td>
+							<td><b>3756</b></td>
+							<td><b>3756</b></td>
+							<td>21</td>
+							<td>1</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">4</td>
+							<td><a href="/ranking?f.Country=CA"><img src="https://img.atcoder.jp/assets/flag/US.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/ksun48" class="username"><span style="color:#FF00FF;">ksun48</span></a>
+								<a href="/ranking?f.Affiliation=Massachusetts&#43;Institute&#43;of&#43;Technology"><span class="ranking-affiliation break-all">MIT</span></a></td>
+							<td>1998</td>
+							<td><b>3731</b></td>
+							<td><b>3784</b></td>
+							<td>42</td>
+							<td>2</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">5</td>
+							<td><a href="/ranking?f.Country=CN"><img src="https://img.atcoder.jp/assets/flag/US.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/apiad" class="username"><span class="user-red">apiad</span></a>
+								<a href="/ranking?f.Affiliation="><span class="ranking-affiliation break-all"></span></a></td>
+							<td>1997</td>
+							<td><b>3714</b></td>
+							<td><b>3852</b></td>
+							<td>37</td>
+							<td>5</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">6</td>
+							<td><a href="/ranking?f.Country=PL"><img src="https://img.atcoder.jp/assets/flag/IN.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/mnbvmar" class="username"><span class="user-red">mnbvmar</span></a>
+								<a href="/ranking?f.Affiliation=University&#43;of&#43;Warsaw"><span class="ranking-affiliation break-all">University of Hyderabad</span></a></td>
+							<td>1996</td>
+							<td><b>3633</b></td>
+							<td><b>3736</b></td>
+							<td>16</td>
+							<td>1</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">7</td>
+							<td><a href="/ranking?f.Country=US"><img src="https://img.atcoder.jp/assets/flag/US.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/Benq" class="username"><span style="color:#1E8449;">Benq</span></a>
+								<a href="/ranking?f.Affiliation=MIT"><span class="ranking-affiliation break-all">MIT</span></a></td>
+							<td>2001</td>
+							<td><b>3617</b></td>
+							<td><b>3617</b></td>
+							<td>43</td>
+							<td>0</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">8</td>
+							<td><a href="/ranking?f.Country=RU"><img src="https://img.atcoder.jp/assets/flag/IN.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/cospleermusora" class="username"><span class="user-red">Rohan</span></a>
+								<a href="/ranking?f.Affiliation="><span class="ranking-affiliation break-all"></span></a></td>
+							<td></td>
+							<td><b>3606</b></td>
+							<td><b>3783</b></td>
+							<td>25</td>
+							<td>3</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">9</td>
+							<td><a href="/ranking?f.Country=CH"><img src="https://img.atcoder.jp/assets/flag/IN.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/Petr" class="username"><span class="user-red">Pankaj</span></a>
+								<a href="/ranking?f.Affiliation="><span class="ranking-affiliation break-all"></span></a></td>
+							<td>1985</td>
+							<td><b>3569</b></td>
+							<td><b>3882</b></td>
+							<td>43</td>
+							<td>2</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">10</td>
+							<td><a href="/ranking?f.Country=RU"><img src="https://img.atcoder.jp/assets/flag/US.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/LHiC" class="username"><span class="user-red">Abhinav</span></a>
+								<a href="/ranking?f.Affiliation=Moscow&#43;SU"><span class="ranking-affiliation break-all">UC berkley</span></a></td>
+							<td></td>
+							<td><b>3557</b></td>
+							<td><b>3812</b></td>
+							<td>48</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="text-center">
+	<ul class="pagination pagination-sm mt-0 mb-1">
+		
+			<li class="active"><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">1</a></li>
+			<li ><a href='C:\Users\anuri\OneDrive\Desktop\18881A0531\rankin2.html'>2</a></li>
+		
+	</ul>		
+<hr>
+	<div class="container" style="margin-bottom: 80px;">
+			<footer class="footer">
+			
+			<ul>
+				<li><a href="/tos">Terms of service</a></li>
+				<li><a href="/privacy">Privacy Policy</a></li>
+				<li><a href="/personal">Information Protection Policy</a></li>
+				<li><a href="/company">Company</a></li>
+				<li><a href="/faq">FAQ</a></li>
+				<li><a href="/contact">Contact</a></li>
+				
+			</ul>
+			<div class="text-center">
+					<small id="copyright">Copyright Since 2020 &copy; CoderBinge All rights reserved.</small>
+			</div>
+			</footer>
+	</div>
+	<p id="fixed-server-timer" ></p>
+	<div id="scroll-page-top" style="display:none;"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Page Top</div>
+</body>
+</html>
+
+

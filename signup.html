@@ -1,0 +1,295 @@
+<html>
+<head>
+	<title>Sign Up -CoderBinge</title>
+	<link href="C:\Users\anuri\OneDrive\Desktop/18881A0531\fonts.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="https://img.atcoder.jp/public/7d95449/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\anuri\OneDrive\Desktop/18881A0531\base.css">
+</head>
+<body>
+<div id="main-div" class="float-container">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+				
+					<li><a href="C:\Users\anuri\OneDrive\Desktop/18881A0531\home.html">Home</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop/18881A0531\contest.html">Contest</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop/18881A0531\ranking.html">Ranking</a></li>
+				
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+						<li><a href="C:\Users\anuri\OneDrive\Desktop/18881A0531\signup.html">Sign Up</a></li>
+						<li><a href="C:\Users\anuri\OneDrive\Desktop/18881A0531\signin.html">Sign In</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<form method="POST" name="form_logout" action="https://logout?continue=https%3A%2F%2Fatcoder.jp%2F">
+		<input type="hidden" name="csrf_token" value="aMtgX9wMOUP9VEeCvQFK3tyN&#43;9oI28velW38SHm5Qqg=" />
+	</form>
+	<div id="main-container" class="container"
+		 	style="">
+
+<div class="row">
+	<div class="col-sm-12">
+		<h2>Sign Up</h2>
+		<hr>
+<p><span class="required">Required</span></p>
+
+	<form name="register_form" class="form-horizontal" action="" method="POST">
+		
+		<div class="form-group ">
+			<label class="control-label col-sm-3 required" for="input-userscreenname">Username</label>
+			<div class="col-sm-3">
+				<input type="text" pattern="^[a-zA-Z0-9_]{3,16}$" class="form-control" id="input-userscreenname"
+					   name="ri.UserScreenName" value="" required/>
+				<span class="error"></span>
+			</div>
+			<div id="status-userxscreenname" class="col-sm-6">
+				<span id="status-userscreenname-icon"></span>
+				<span id="status-userscreenname-message"></span>
+			</div>
+			<small class="gray col-sm-offset-3 col-sm-9">You can use only English letters and numbers. The length must be between 3 and 16, inclusive.</small>
+			
+		</div>
+		
+	
+	
+	
+	<div class="form-group ">
+		<label class="control-label col-sm-3 required" for="ri.Mail">Email Address</label>
+		<div class="col-sm-5">
+			<input type="email" class="form-control" id="ri.Mail"
+				   name="ri.Mail" value="" required/>
+			<span class="error"></span>
+		</div>
+	</div>
+	
+	
+		
+		<div class="form-group ">
+			<label class="control-label col-sm-3 required" for="ri.Password">Password</label>
+			<div class="col-sm-5">
+				<input type="password" class="form-control" id="ri.Password"
+					   name="ri.Password" minlength="6" required/>
+				<span class="error"></span>
+			</div>
+			<small class="gray col-sm-offset-3 col-sm-9">The password must contain at least 6 characters and must contain both English letters and numbers at least once respectively.</small>
+		</div>
+		
+		
+		<div class="form-group ">
+			<label class="control-label col-sm-3 required" for="ri.PasswordConfirm">Confirm Password</label>
+			<div class="col-sm-5">
+				<input type="password" class="form-control" id="ri.PasswordConfirm"
+					   name="ri.PasswordConfirm" minlength="6" required/>
+				<span class="error"></span>
+			</div>
+		</div>
+		
+
+		
+		
+			<div class="form-group " style="display:none;">
+				<label class="control-label col-sm-3 required" for="username">Username</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="username" name="username" value="" />
+					<span class="error"></span>
+				</div>
+			</div>
+		
+		
+			<div class="form-group " style="display:none;">
+				<label class="control-label col-sm-3 required" for="url">URL</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="url" name="url" value="" required/>
+					<span class="error"></span>
+				</div>
+			</div>
+		
+		
+			<div class="form-group " style="display:none;">
+				<label class="control-label col-sm-3 required" for="nickname">Nickname</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="nickname" name="nickname" value="" required/>
+					<span class="error"></span>
+				</div>
+			</div>
+		
+		<script>
+			$(function() {
+				$('#url').val('dummy');
+				$('#submit').click(function() {
+					$('#nickname').val('DUMMY');
+				});
+			});
+		</script>
+	
+
+	
+	<div class="form-group ">
+		<label class="control-label col-sm-3 required" for="ri.Country">Country/Region <span class='glyphicon glyphicon-question-sign' aria-hidden='true' data-html='true' data-toggle='tooltip' title="Country/region you're representing."></span></label>
+		<div class="col-sm-5">
+			<select class="form-control" id="ri.Country" name="ri.Country" data-placeholder="Select an option" required>
+				<option></option>
+					<option value="AF">Afghanistan</option>
+					<option value="AL">Albania</option>
+					<option value="HN">Honduras</option>
+					<option value="HK">Hong Kong</option>
+					<option value="HU">Hungary</option>
+					<option value="IS">Iceland</option>
+					<option value="IN">India</option>
+					<option value="ID">Indonesia</option>
+					<option value="IR">Iran</option>
+					<option value="IQ">Iraq</option>
+					<option value="IE">Ireland</option>
+					<option value="IL">Israel</option>
+					<option value="IT">Italy</option>
+					<option value="JP">Japan</option>
+					<option value="RO">Romania</option>
+					<option value="RU">Russia</option>
+					<option value="SM">San Marino</option>
+					<option value="ST">Sao Tome and Principe</option>
+					<option value="SS">South Sudan</option>
+					<option value="ES">Spain</option>
+					<option value="LK">Sri Lanka</option>
+					<option value="UG">Uganda</option>
+					<option value="UA">Ukraine</option>
+					<option value="AE">United Arab Emirates</option>
+					<option value="GB">United Kingdom</option>
+					<option value="US">United States of America</option>
+					<option value="XX">Other</option>
+				
+			</select>
+			<span class="error"></span>
+		</div>
+	</div>
+	<div class="form-group ">
+		<label class="control-label col-sm-3" for="ri.BirthYear">Birth Year</label>
+		   <div class="col-sm-2">
+			<select class="form-control" id="ri.BirthYear" data-placeholder="-" data-allow-clear="true" name="ri.BirthYear">
+				<option></option>
+					<option value="2013">2013</option>
+					<option value="2012">2012</option>
+					<option value="2011">2011</option>
+					<option value="2010">2010</option>
+					<option value="2009">2009</option>
+					<option value="2008">2008</option>
+					<option value="2007">2007</option>
+					<option value="2006">2006</option>
+					<option value="2005">2005</option>
+					<option value="2004">2004</option>
+					<option value="2003">2003</option>
+					<option value="2002">2002</option>
+					<option value="2001">2001</option>
+					<option value="2000">2000</option>
+					<option value="1999">1999</option>
+					<option value="1998">1998</option>
+					<option value="1997">1997</option>
+					<option value="1996">1996</option>
+			</select>
+			<span class="error"></span>
+		</div>
+	</div>
+<div class="form-group">
+		<label class="control-label col-sm-3" for="notification">Email Notifications</label>
+		<div class="col-sm-5" id="notification">
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="notification[]" value="0" checked>
+					Receive important notifications.
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="notification[]" value="1" checked>
+					Receive contest notifications.
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="notification[]" value="2" checked>
+					Receive other useful information.
+				</label>
+			</div>
+		</div>
+	</div>
+	
+
+	
+		
+	<div class="form-group ">
+		<label class="control-label col-sm-3 required" for='privacy'>Information Protection Policy</label>
+		<div class="col-sm-9">
+			<dl id="personal">
+				<dt>▶About Personal Information</dt>
+				<dd style="display:none;">
+					<div class="panel panel-default"><div class="panel-body">
+							<h5>Purpose of Use</h5>
+							<ul>
+								<li>We will use User&#39;s Personal Information solely for the following purposes:</li>
+							</ul>
+							<ol>
+								<li>To provide the Services as well as guidance and information in relation thereto;</li>
+								<li>To customize Services, information on the Service pages and the distribution of advertising based on the age, occupation, gender, hobbies and preferences, etc. of Users;</li>
+								<li>To improve the Services, and for the development of new services, etc.;</li>
+								<li>To prevent the usage of Services in a manner that violates the Terms of Use; or</li>
+								<li>To create statistical data about the Services that are processed in a manner so that individuals cannot be identified.</li>
+							</ol>
+							<h5>Requests for the disclosure, etc. of your personal information</h5>
+							<ul>
+								<li>You may request that we notify you of the purpose of use of your personal information, disclose the contents of said information, make corrections or additions to or delete the contents of said information, discontinue using or providing said information, or erase said information (collectively referred to as requests for the &#34;disclosure, etc.&#34; of your personal information). We accept requests for the disclosure, etc. of personal information in our possession via our &#34;Personal Information Complaints and Enquiries Desk&#34; (details provided below).</li>
+							</ul>
+						</div></div>
+				</dd>
+			</dl>
+
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" id='privacy' name='privacy' value="true"  required/>
+					<span>I agree with handling personal information.</span>
+				</label>
+			</div>
+			<span class="error"></span>
+		</div>
+	</div>
+
+<script>$(function(){$("#personal dt").click(function(){$(this).next().slideToggle();});});</script>
+		<hr>
+		<p class="col-sm-offset-3">You shall be deemed to have agreed all the Terms of service when you sign up.</p>
+	
+	<input type="hidden" name="csrf_token" value="aMtgX9wMOUP9VEeCvQFK3tyN&#43;9oI28velW38SHm5Qqg=" />
+	<div class="form-group">
+		<label class="control-label col-sm-3" for="submit"></label>
+		<div class="col-sm-5">
+				<button type="submit" class="btn btn-primary" id="submit">Sign Up</button>		
+		</div>
+	</div>
+</form>
+	<hr>
+</div> 
+	<div class="container" style="margin-bottom: 80px;">
+			<footer class="footer">
+			<ul>
+				<li>Terms of service</li>
+				<li>Privacy Policy</li>
+				<li>Information Protection Policy</li>
+				<li>Company</li>
+				<li>FAQ</li>
+				<li>Contact</li>
+			</ul>
+			<div class="text-center">
+					<small id="copyright">Copyright Since 2020 &copy; CoderBinge All rights reserved.</small>
+			</div>
+			</footer>
+	</div>
+	<p id="fixed-server-timer" ></p>
+</body>
+</html>
+

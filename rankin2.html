@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ranking - CoderBinge</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="https://img.atcoder.jp/public/7d95449/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://img.atcoder.jp/public/7d95449/css/base.css">
+	<script src="https://img.atcoder.jp/public/7d95449/js/lib/jquery-1.9.1.min.js"></script>
+	<script src="https://img.atcoder.jp/public/7d95449/js/lib/bootstrap.min.js"></script>
+	<script src="https://img.atcoder.jp/public/7d95449/js/cdn/js.cookie.min.js"></script>
+	<script src="https://img.atcoder.jp/public/7d95449/js/cdn/moment.min.js"></script>
+	<script src="https://img.atcoder.jp/public/7d95449/js/cdn/moment_js-ja.js"></script>
+	<script>
+		var LANG = "en";
+		var userScreenName = "";
+		var csrfToken = "aMtgX9wMOUP9VEeCvQFK3tyN+9oI28velW38SHm5Qqg="
+	</script>
+	<script src="https://img.atcoder.jp/public/7d95449/js/utils.js"></script>
+		<link href="https://img.atcoder.jp/public/7d95449/css/cdn/select2.min.css" rel="stylesheet" />
+		<link href="https://img.atcoder.jp/public/7d95449/css/cdn/select2-bootstrap.min.css" rel="stylesheet" />
+		<script src="https://img.atcoder.jp/public/7d95449/js/lib/select2.min.js"></script>
+	<script src="https://img.atcoder.jp/public/7d95449/js/base.js"></script>
+	<script src="https://img.atcoder.jp/public/7d95449/js/ga.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	var __pParams = __pParams || [];
+	__pParams.push({client_id: '468', c_1: 'atcodercontest', c_2: 'ClientSite'});
+</script>
+<script type="text/javascript" src="https:https://cdn.d2-apps.net/js/tr.js" async></script>
+
+
+
+<div id="main-div" class="float-container">
+
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+				
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\home.html">Home</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\contest.html">Contest</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">Ranking</a></li>
+				
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\signup.html">Sign Up</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\signin.html">Sign In</a></li>	
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<form method="POST" name="form_logout" action="/logout?continue=https%3A%2F%2Fatcoder.jp%2Franking">
+		<input type="hidden" name="csrf_token" value="aMtgX9wMOUP9VEeCvQFK3tyN&#43;9oI28velW38SHm5Qqg=" />
+	</form>
+	<div id="main-container" class="container"
+		 	style="">
+		
+
+
+<br>
+<div class="row">
+	<div class="col-sm-12 col-md-10 col-md-offset-1">
+		<p>
+			<span class="h3">Ranking</span>
+			<span class="grey">
+				
+					Active Users
+					<span class='glyphicon glyphicon-question-sign' aria-hidden='true' data-html='true' data-toggle='tooltip' title="Users participated in a rated contest in recent 2 years"></span>
+				
+			</span>
+		</p>
+		<hr class="mt-0 mb-1">
+
+		<ul class="nav nav-pills small mb-1">
+			<li class="active"><a href="/ranking">Active Users</a></li>
+			<li ><a href="/ranking/all">All Users</a></li>
+		</ul>
+		
+
+		<div class="text-center">
+	<ul class="pagination pagination-sm mt-0 mb-1">
+			<li class="active"><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">1</a></li>
+			<li ><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\rankin2.html">2</a></li>
+	</ul>
+</div>
+		<div class="panel panel-default panel-filter">
+			<div class="panel-heading">
+				<h3 class="panel-title filter-title" data-target="#form-filter"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Filter <span class="glyphicon pull-right"></span></h3>
+				<form class="form-inline form-filter" action="/ranking" id="form-filter" style="display:none;">
+					<hr>
+					
+					<div class="form-group form-group-sm">
+						<label for="f.Country">Country/Region: </label>
+						<select id="f.Country" class="form-control" style="width:150px;" data-placeholder="-" data-allow-clear="true" name="f.Country">
+							<option></option>
+							<option value="AF">Afghanistan</option>
+							<option value="AL">Albania</option>
+							<option value="HN">Honduras</option>
+							<option value="HK">Hong Kong</option>
+							<option value="HU">Hungary</option>
+							<option value="IS">Iceland</option>
+							<option value="IN">India</option>
+							<option value="ID">Indonesia</option>
+							<option value="IR">Iran</option>
+							<option value="IQ">Iraq</option>
+							<option value="IE">Ireland</option>
+							<option value="IL">Israel</option>
+							<option value="IT">Italy</option>
+							<option value="JP">Japan</option>
+							<option value="RO">Romania</option>
+							<option value="RU">Russia</option>
+							<option value="SM">San Marino</option>
+							<option value="ST">Sao Tome and Principe</option>
+							<option value="SS">South Sudan</option>
+							<option value="ES">Spain</option>
+							<option value="LK">Sri Lanka</option>
+							<option value="UG">Uganda</option>
+							<option value="UA">Ukraine</option>
+							<option value="AE">United Arab Emirates</option>
+							<option value="GB">United Kingdom</option>
+							<option value="US">United States of America</option>
+							<option value="XX">Other</option>
+						</select>
+					</div>
+					
+					
+					<div class="form-group form-group-sm">
+						<label for="f.UserScreenName">User: </label>
+						<input type="text" id="f.UserScreenName" class="form-control" name="f.UserScreenName" value=""
+							   data-html="true" data-toggle="tooltip" data-trigger="focus" title="You can use wildcards.&lt;br&gt;?: any character&lt;br&gt;*: any string">
+					</div>
+					
+					
+					<div class="form-group form-group-sm">
+						<label for="f.Affiliation">Affiliation: </label>
+						<input type="text" id="f.Affiliation" class="form-control" style="min-width:200px;" name="f.Affiliation" value=""
+							   data-html="true" data-toggle="tooltip" data-trigger="focus" title="You can use wildcards.&lt;br&gt;?: any character&lt;br&gt;*: any string">
+					</div>
+					
+					<br>
+					<div class="form-group form-group-sm">
+						<table>
+							<tr><td><label>Birth Year: </label></td><td><input type='number' class='form-control' name='f.BirthYearLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.BirthYearUpperBound' value='9999'></td></tr>
+							<tr><td><label>Rating: </label></td><td><input type='number' class='form-control' name='f.RatingLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.RatingUpperBound' value='9999'></td></tr>
+							<tr><td><label>Highest Rating: </label></td><td><input type='number' class='form-control' name='f.HighestRatingLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.HighestRatingUpperBound' value='9999'></td></tr>
+							<tr><td><label>Rated Matches: </label></td><td><input type='number' class='form-control' name='f.CompetitionsLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.CompetitionsUpperBound' value='9999'></td></tr>
+							<tr><td><label>Win: </label></td><td><input type='number' class='form-control' name='f.WinsLowerBound' value='0'></td><td>-</td><td><input type='number' width='10px' class='form-control' name='f.WinsUpperBound' value='9999'></td></tr>
+						</table>
+					</div>
+					<br>
+					<div class="form-group">
+						<div>
+							<button type="submit" class="btn btn-primary btn-sm">Search</button>
+							<a class="btn btn-default btn-sm" href="/ranking">Reset</a>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="table-responsive">
+				<table class="table table-bordered table-striped th-center">
+					<thead>
+					<tr class="no-break">
+						<th width="4%"><a href="/ranking?desc=true&amp;orderBy=rank">Rank</a></th>
+						<th><a href="/ranking?orderBy=user_screen_name">User</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=birth_year">Birth</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=rating">Rating</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=highest_rating">Highest</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=competitions">Match</a></th>
+						<th width="5%"><a href="/ranking?desc=true&amp;orderBy=wins">Win</a></th>
+					</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="no-break">11</td>
+							<td><a href="/ranking?f.Country=BY"><img src="https://img.atcoder.jp/assets/flag/US.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_champion.png"> <a href="/users/tourist" class="username"><span class="user-red">happyguy</span></a>
+								<a href="/ranking?f.Affiliation=ITMO&#43;University"><span class="ranking-affiliation break-all">UC Davis</span></a></td>
+							<td>1994</td>
+							<td><b>1500</b></td>
+							<td><b>4229</b></td>
+							<td>43</td>
+							<td>21</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">12</td>
+							<td><a href="/ranking?f.Country=RU"><img src="https://img.atcoder.jp/assets/flag/IN.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/Um_nik" class="username"><span style="color:#08E8DE;">Um_nikhilll</span></a>
+								<a href="/ranking?f.Affiliation=Nizhny&#43;Novgorod&#43;State&#43;University"><span class="ranking-affiliation break-all">Vardhaman College of Engineering</span></a></td>
+							<td>1996</td>
+							<td><b>1300</b></td>
+							<td><b>3919</b></td>
+							<td>46</td>
+							<td>6</td>
+						</tr>
+					
+						<tr>
+							<td class="no-break">13</td>
+							<td><a href="/ranking?f.Country=US"><img src="https://img.atcoder.jp/assets/flag/IN.png"></a> <img src="https://img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/ecnerwala" class="username"><span class="user-red">azeemwala</span></a>
+								<a href="/ranking?f.Affiliation="><span class="ranking-affiliation break-all"></span></a></td>
+							<td>1997</td>
+							<td><b>375</b></td>
+							<td><b>3756</b></td>
+							<td>21</td>
+							<td>1</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="text-center">
+	<ul class="pagination pagination-sm mt-0 mb-1">
+		
+			<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">1</a></li>
+			<li class='active'><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\rankin2.html">2</a></li>
+		
+	</ul>		
+<hr>
+	<div class="container" style="margin-bottom: 80px;">
+			<footer class="footer">
+			
+			<ul>
+				<li><a href="/tos">Terms of service</a></li>
+				<li><a href="/privacy">Privacy Policy</a></li>
+				<li><a href="/personal">Information Protection Policy</a></li>
+				<li><a href="/company">Company</a></li>
+				<li><a href="/faq">FAQ</a></li>
+				<li><a href="/contact">Contact</a></li>
+				
+			</ul>
+			<div class="text-center">
+					<small id="copyright">Copyright Since 2020 &copy; CoderBinge All rights reserved.</small>
+			</div>
+			</footer>
+	</div>
+	<p id="fixed-server-timer" ></p>
+	<div id="scroll-page-top" style="display:none;"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Page Top</div>
+</body>
+</html>
+
+

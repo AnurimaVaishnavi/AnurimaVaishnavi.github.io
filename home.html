@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CoderBinge</title>
+	<link href="C:\Users\anuri\OneDrive\Desktop\18881A0531\fonts.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="https://img.atcoder.jp/public/8e665c1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\anuri\OneDrive\Desktop\18881A0531\base.css">
+	<script src="https://img.atcoder.jp/public/8e665c1/js/lib/jquery-1.9.1.min.js"></script>
+	<script src="https://img.atcoder.jp/public/8e665c1/js/lib/bootstrap.min.js"></script>
+	<script src="https://img.atcoder.jp/public/8e665c1/js/cdn/js.cookie.min.js"></script>
+	<script src="https://img.atcoder.jp/public/8e665c1/js/cdn/moment.min.js"></script>
+	<script src="https://img.atcoder.jp/public/8e665c1/js/cdn/moment_js-ja.js"></script>
+	<script>
+		var LANG = "en";
+		var userScreenName = "";
+		var csrfToken = "aMtgX9wMOUP9VEeCvQFK3tyN+9oI28velW38SHm5Qqg="
+	</script>
+	<script src="https://img.atcoder.jp/public/8e665c1/js/utils.js"></script>
+	
+	
+	
+	
+	
+	
+		<script src="https://img.atcoder.jp/public/8e665c1/js/cdn/run_prettify.js"></script>
+	
+	
+		<script type="text/x-mathjax-config">MathJax.Hub.Config({messageStyle:"none",tex2jax:{skipTags:["script","noscript","style","textarea","code"],inlineMath:[['$','$'],['\\(','\\)']]}});</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+	
+		<script src="https://img.atcoder.jp/public/8e665c1/js/lib/marked.js"></script>
+		<script src="https://img.atcoder.jp/public/8e665c1/js/cdn/jquery.timeago.min.js"></script>
+		
+		<script src="https://img.atcoder.jp/public/8e665c1/js/blog.js"></script>
+	
+	
+	
+	
+	
+	
+	
+	
+	<script src="https://img.atcoder.jp/public/8e665c1/js/base.js"></script>
+	<script src="https://img.atcoder.jp/public/8e665c1/js/ga.js"></script>
+</head>
+<body>
+
+<div id="main-div" class="float-container">
+
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+				
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\home.html">Home</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\contest.html">Contest</a></li>
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\ranking.html">Ranking</a></li>
+				
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\signup.html">Sign Up</a></li>
+						<li><a href="C:\Users\anuri\OneDrive\Desktop\18881A0531\signin.html">Sign In</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<form method="POST" name="form_logout" action="/logout?continue=https%3A%2F%2Fatcoder.jp%2Fhome">
+		<input type="hidden" name="csrf_token" value="aMtgX9wMOUP9VEeCvQFK3tyN&#43;9oI28velW38SHm5Qqg=" />
+	</form>
+	<div id="main-container" class="container"
+		 	style="">
+		<br>
+<div class="row">
+	<div class="col-sm-4">
+		<div class="panel panel-primary">
+	<div class="panel-heading collapse-heading" data-toggle="collapse" data-target="#collapse-contest">
+		<h3 class="panel-title">
+			Contest
+			<span class="glyphicon pull-right"></span>
+		</h3>
+	</div>
+	<div id="collapse-contest" class="panel-body panel-collapse collapse in">
+		
+		
+			
+			<div id="contest-table-permanent">
+				<h4>Permanent Contests</h4>
+				
+				
+				<div class="table-responsive">
+	<table class="table table-default table-striped table-hover table-condensed small" style="margin-bottom:0;">
+		<thead>
+		<tr>
+			
+			<th>Contest Name</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+			<tr>
+				
+				<td><small><span class="">◉</span> <a href='/contests/practice'>practice contest</a></small></td>
+			</tr>
+		
+			<tr>
+				
+				<td><small><span class="">◉</span> <a href='/contests/practice2'>CoderBinge Library Practice Contest</a></small></td>
+			</tr>
+		
+		</tbody>
+	</table>
+</div>
+			</div>
+		
+		
+			<hr>
+			<div id="contest-table-upcoming">
+				<h4>Upcoming Contests</h4>
+				
+				
+				<div class="table-responsive">
+	<table class="table table-default table-striped table-hover table-condensed small" style="margin-bottom:0;">
+		<thead>
+		<tr>
+			<th width="36%">Start Time</th>
+			<th>Contest Name</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201217T0000&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-12-17 00:00:00+0900</time></a></small></td>
+				<td><small><span class="">◉</span> <a href='/contests/hokudai-hitachi2020'>Hitachi Hokudai Lab. &amp; Hokkaido University Contest 2020</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201219T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-12-19 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-blue">◉</span> <a href='/contests/abc186'>Panasonic Programming Contest (CoderBinge Beginner Contest 186)</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201226T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-12-26 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-red">◉</span> <a href='/contests/agc050'>CoderBinge Grand Contest 050 (Good Bye rng_58 Day 1)</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201227T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-12-27 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-red">◉</span> <a href='/contests/agc051'>CoderBinge Grand Contest 051 (Good Bye rng_58 Day 2)</a></small></td>
+			</tr>
+		
+		</tbody>
+	</table>
+</div>
+			</div>
+		
+		
+			<hr>
+			<div id="contest-table-recent">
+				<h4>Recent Contests</h4>
+				
+				
+				<div class="table-responsive">
+	<table class="table table-default table-striped table-hover table-condensed small" style="margin-bottom:0;">
+		<thead>
+		<tr>
+			<th width="36%">Start Time</th>
+			<th>Contest Name</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201213T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-12-13 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-blue">◉</span> <a href='/contests/abc185'>CoderBinge Beginner Contest 185</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201205T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-12-05 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-orange">◉</span> <a href='/contests/arc110'>CoderBinge Regular Contest 110（Sponsored by KAJIMA CORPORATION）</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201128T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-11-28 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-orange">◉</span> <a href='/contests/arc109'>CoderBinge Regular Contest 109</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201122T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-11-22 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-blue">◉</span> <a href='/contests/abc184'>CoderBinge Beginner Contest 184</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201121T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-11-21 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-orange">◉</span> <a href='/contests/arc108'>CoderBinge Regular Contest 108</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201115T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-11-15 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-blue">◉</span> <a href='/contests/abc183'>CoderBinge Beginner Contest 183</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201114T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-11-14 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-red">◉</span> <a href='/contests/agc049'>CoderBinge Grand Contest 049</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201108T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-11-08 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-blue">◉</span> <a href='/contests/abc182'>CoderBinge Beginner Contest 182</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201101T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-11-01 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-blue">◉</span> <a href='/contests/abc181'>CoderBinge Beginner Contest 181</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201031T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-10-31 21:00:00+0900</time></a></small></td>
+				<td><small><span class="user-orange">◉</span> <a href='/contests/arc107'>CoderBinge Regular Contest 107</a></small></td>
+			</tr>
+		
+		</tbody>
+	</table>
+</div>
+			</div>
+		
+		<br>
+		<p class="btn-text-group">
+			<a href='/contests/' class="btn-text">Detail</a>
+
+
+		</p>
+	</div>
+</div>
+		<div class="panel panel-primary">
+	<div class="panel-heading collapse-heading" data-toggle="collapse" data-target="#collapse-ranking">
+		<h3 class="panel-title">
+			Ranking
+			<span class="glyphicon pull-right"></span>
+		</h3>
+	</div>
+	<div id="collapse-ranking" class="panel-body panel-collapse collapse in">
+		<div class="table-responsive">
+			<table class="table table-default table-striped table-hover table-condensed">
+				<thead>
+					<tr>
+						<th width="8%"></th>
+						<th>User</th>
+						<th width="20%">Rating</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+						<tr>
+							<td>1</td>
+							<td><img src="//img.atcoder.jp/assets/flag/BY.png"> <img src="//img.atcoder.jp/assets/icon/crown_champion.png"> <a href="/users/tourist" class="username"><span class="user-red">tourist</span></a></td>
+							<td>4224</td>
+						</tr>
+					
+						<tr>
+							<td>2</td>
+							<td><img src="//img.atcoder.jp/assets/flag/RU.png"> <img src="//img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/Um_nik" class="username"><span style="color:#08E8DE;">Um_nik</span></a></td>
+							<td>3868</td>
+						</tr>
+					
+						<tr>
+							<td>3</td>
+							<td><img src="//img.atcoder.jp/assets/flag/US.png"> <img src="//img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/ecnerwala" class="username"><span class="user-red">ecnerwala</span></a></td>
+							<td>3756</td>
+						</tr>
+					
+						<tr>
+							<td>4</td>
+							<td><img src="//img.atcoder.jp/assets/flag/CA.png"> <img src="//img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/ksun48" class="username"><span style="color:#FF00FF;">ksun48</span></a></td>
+							<td>3731</td>
+						</tr>
+					
+						<tr>
+							<td>5</td>
+							<td><img src="//img.atcoder.jp/assets/flag/CN.png"> <img src="//img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/apiad" class="username"><span class="user-red">apiad</span></a></td>
+							<td>3714</td>
+						</tr>
+					
+						<tr>
+							<td>6</td>
+							<td><img src="//img.atcoder.jp/assets/flag/PL.png"> <img src="//img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/mnbvmar" class="username"><span class="user-red">mnbvmar</span></a></td>
+							<td>3633</td>
+						</tr>
+					
+						<tr>
+							<td>7</td>
+							<td><img src="//img.atcoder.jp/assets/flag/US.png"> <img src="//img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/Benq" class="username"><span style="color:#1E8449;">Benq</span></a></td>
+							<td>3617</td>
+						</tr>
+					
+						<tr>
+							<td>8</td>
+							<td><img src="//img.atcoder.jp/assets/flag/RU.png"> <img src="//img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/cospleermusora" class="username"><span class="user-red">cospleermusora</span></a></td>
+							<td>3606</td>
+						</tr>
+					
+						<tr>
+							<td>9</td>
+							<td><img src="//img.atcoder.jp/assets/flag/CH.png"> <img src="//img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/Petr" class="username"><span class="user-red">Petr</span></a></td>
+							<td>3569</td>
+						</tr>
+					
+						<tr>
+							<td>10</td>
+							<td><img src="//img.atcoder.jp/assets/flag/RU.png"> <img src="//img.atcoder.jp/assets/icon/crown_gold.png"> <a href="/users/LHiC" class="username"><span class="user-red">LHiC</span></a></td>
+							<td>3557</td>
+						</tr>
+					
+				</tbody>
+			</table>
+		</div>
+		<p class="btn-text-group">
+			<a href='/ranking' class="btn-text">View all</a>
+			<span class="divider"></span>
+			<a href='/hof' class="btn-text">Hall of Fame</a>
+		</p>
+	</div>
+</div>
+
+		
+	</div>
+	<div class="col-sm-8">
+		
+			
+			
+	
+		<div class="panel panel-info">
+			<div class="panel-heading post-heading">
+				<h3 class="panel-title"><a href="/posts/10">Information</a></h3>
+				
+			</div>
+			<div class="panel-body blog-post">[How to get an account / participate in contests?](http://atcoder.jp/posts/2)
+
+[CoderBinge&#39;s Contest Format](http://atcoder.jp/posts/1)
+
+[CoderBinge&#39;s Testcases](https://www.dropbox.com/sh/nx3tnilzqz7df8a/AAAYlTq2tiEHl5hsESw6-yfLa?dl=0) - [CoderBinge&#39;s Rating System](https://www.dropbox.com/sh/zpgcogxmmu84rr8/AADcw6o7M9tJFDgtpqEQQ46Ua?dl=0) - [CoderBinge Race Ranking](https://img.atcoder.jp/file/GP30.html)</div>
+			
+		</div>
+	
+
+		
+		<hr>
+		
+			
+			
+	
+		<div class="panel panel-default">
+			<div class="panel-heading post-heading">
+				<h3 class="panel-title"><a href="/posts/567">CoderBinge Beginner Contest 185 Announcement</a></h3>
+				
+					<small>posted:
+						<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1607839482">
+							<time class="timeago" datetime="2020/12/13 15:04:42"></time>
+						</span>
+					</small>
+				
+			</div>
+			<div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/abc185&#34;&gt;CoderBinge Beginner Contest 185&lt;/a&gt;.
+
+- Contest URL: https://atcoder.jp/contests/abc185
+- Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201213T2100&amp;p1=248
+- Duration:  100 minutes 
+- Number of Tasks: 6
+- Writer: &lt;a href=&#34;/users/beet&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;beet&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/gazelle&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;gazelle&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/kobae964&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;kobae964&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/kort0n&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;kort0n&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/kyopro_friends&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;kyopro_friends&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/QCFium&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;QCFium&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/satashun&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;satashun&lt;/span&gt;&lt;/a&gt;
+- Rated range:  ~ 1999
+
+The point values will be 100-200-300-400-500-600. 
+
+We are looking forward to your participation!
+</div>
+			
+				<div class="panel-footer post-footer">
+					<div class="row">
+						<div class="col-xs-7">
+							<small>last update:
+								<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1607839482">
+									<time class="timeago" datetime="2020/12/13 15:04:42"></time>
+								</span>
+							</small>
+						</div>
+						<div class="col-xs-5 clearfix">
+							
+							
+							
+<div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/567?lang=en" data-a2a-title="CoderBinge Beginner Contest 185 Announcement">
+	<a class="a2a_button_facebook"></a>
+	<a class="a2a_button_twitter"></a>
+	
+		<a class="a2a_button_telegram"></a>
+	
+	<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+	
+
+		
+			
+			
+	
+		<div class="panel panel-default">
+			<div class="panel-heading post-heading">
+				<h3 class="panel-title"><a href="/posts/565">CoderBinge Regular Contest 110（Sponsored by KAJIMA CORPORATION） Announcement</a></h3>
+				
+					<small>posted:
+						<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1607071171">
+							<time class="timeago" datetime="2020/12/04 17:39:31"></time>
+						</span>
+					</small>
+				
+			</div>
+			<div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/arc110&#34;&gt;CoderBinge Regular Contest 110（Sponsored by KAJIMA CORPORATION）&lt;/a&gt;.
+
+- Contest URL: https://atcoder.jp/contests/arc110
+- Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201205T2100&amp;p1=248
+- Duration:  120 minutes 
+- Number of Tasks: 6
+- Writer: &lt;a href=&#34;/users/gazelle&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;gazelle&lt;/span&gt;&lt;/a&gt;
+- Rated range:  ~ 2799
+
+The point values will be 300-400-500-600-800-900. 
+
+We are looking forward to your participation!
+</div>
+			
+				<div class="panel-footer post-footer">
+					<div class="row">
+						<div class="col-xs-7">
+							<small>last update:
+								<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1607071171">
+									<time class="timeago" datetime="2020/12/04 17:39:31"></time>
+								</span>
+							</small>
+						</div>
+						<div class="col-xs-5 clearfix">
+							
+							
+							
+<div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/565?lang=en" data-a2a-title="CoderBinge Regular Contest 110（Sponsored by KAJIMA CORPORATION） Announcement">
+	<a class="a2a_button_facebook"></a>
+	<a class="a2a_button_twitter"></a>
+	
+		<a class="a2a_button_telegram"></a>
+	
+	<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+	
+
+		
+			
+			
+	
+		<div class="panel panel-default">
+			<div class="panel-heading post-heading">
+				<h3 class="panel-title"><a href="/posts/562">CoderBinge Regular Contest 109 Announcement</a></h3>
+				
+					<small>posted:
+						<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1606471725">
+							<time class="timeago" datetime="2020/11/27 19:08:45"></time>
+						</span>
+					</small>
+				
+			</div>
+			<div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/arc109&#34;&gt;CoderBinge Regular Contest 109&lt;/a&gt;.
+
+- Contest URL: https://atcoder.jp/contests/arc109
+- Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201128T2100&amp;p1=248
+- Duration:  120 minutes 
+- Number of Tasks: 6
+- Writer: &lt;a href=&#34;/users/nuip&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;nuip&lt;/span&gt;&lt;/a&gt;
+- Rated range:  ~ 2799
+
+The point values will be 300-400-500-600-700-900. 
+
+We are looking forward to your participation!
+</div>
+			
+				<div class="panel-footer post-footer">
+					<div class="row">
+						<div class="col-xs-7">
+							<small>last update:
+								<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1606471725">
+									<time class="timeago" datetime="2020/11/27 19:08:45"></time>
+								</span>
+							</small>
+						</div>
+						<div class="col-xs-5 clearfix">
+							
+							
+							
+<div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/562?lang=en" data-a2a-title="CoderBinge Regular Contest 109 Announcement">
+	<a class="a2a_button_facebook"></a>
+	<a class="a2a_button_twitter"></a>
+	
+		<a class="a2a_button_telegram"></a>
+	
+	<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+	
+
+		
+			
+			
+	
+		<div class="panel panel-default">
+			<div class="panel-heading post-heading">
+				<h3 class="panel-title"><a href="/posts/560">CoderBinge Beginner Contest 184 Announcement</a></h3>
+				
+					<small>posted:
+						<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1606026284">
+							<time class="timeago" datetime="2020/11/22 15:24:44"></time>
+						</span>
+					</small>
+				
+			</div>
+			<div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/abc184&#34;&gt;CoderBinge Beginner Contest 184&lt;/a&gt;.
+
+- Contest URL: https://atcoder.jp/contests/abc184
+- Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201122T2100&amp;p1=248
+- Duration:  100 minutes 
+- Number of Tasks: 6
+- Writer: &lt;a href=&#34;/users/beet&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;beet&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/evima&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-unrated&#34;&gt;evima&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/kyopro_friends&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;kyopro_friends&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/tatyam&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;tatyam&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/sheyasutaka&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;sheyasutaka&lt;/span&gt;&lt;/a&gt;
+- Rated range:  ~ 1999
+
+The point values will be 100-200-300-400-500-600. 
+
+We are looking forward to your participation!
+</div>
+			
+				<div class="panel-footer post-footer">
+					<div class="row">
+						<div class="col-xs-7">
+							<small>last update:
+								<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1606026284">
+									<time class="timeago" datetime="2020/11/22 15:24:44"></time>
+								</span>
+							</small>
+						</div>
+						<div class="col-xs-5 clearfix">
+							
+							
+							
+<div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/560?lang=en" data-a2a-title="CoderBinge Beginner Contest 184 Announcement">
+	<a class="a2a_button_facebook"></a>
+	<a class="a2a_button_twitter"></a>
+	
+		<a class="a2a_button_telegram"></a>
+	
+	<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+	
+
+		
+			
+			
+	
+		<div class="panel panel-default">
+			<div class="panel-heading post-heading">
+				<h3 class="panel-title"><a href="/posts/558">CoderBinge Regular Contest 108 Announcement</a></h3>
+				
+					<small>posted:
+						<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1605881987">
+							<time class="timeago" datetime="2020/11/20 23:19:47"></time>
+						</span>
+					</small>
+				
+			</div>
+			<div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/arc108&#34;&gt;CoderBinge Regular Contest 108&lt;/a&gt;.
+
+- Contest URL: https://atcoder.jp/contests/arc108
+- Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20201121T2100&amp;p1=248
+- Duration:  100 minutes 
+- Number of Tasks: 6
+- Writer: &lt;a href=&#34;/users/camypaper&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;camypaper&lt;/span&gt;&lt;/a&gt;
+- Rated range:  ~ 2799
+
+The point values will be 300-400-500-600-700-900. 
+
+We are looking forward to your participation!
+</div>
+			
+				<div class="panel-footer post-footer">
+					<div class="row">
+						<div class="col-xs-7">
+							<small>last update:
+								<span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1605881987">
+									<time class="timeago" datetime="2020/11/20 23:19:47"></time>
+								</span>
+							</small>
+						</div>
+						<div class="col-xs-5 clearfix">
+							
+							
+							
+<div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/558?lang=en" data-a2a-title="CoderBinge Regular Contest 108 Announcement">
+	<a class="a2a_button_facebook"></a>
+	<a class="a2a_button_twitter"></a>
+	
+		<a class="a2a_button_telegram"></a>
+	
+	<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+	
+
+		
+		<p class="text-center"><a class="btn-text" href="/posts/">Post Archive</a></p>
+	</div>
+</div>
+
+<script>
+	
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	if (userAgent.toLowerCase().indexOf('msie') !== -1 || userAgent.toLowerCase().indexOf('trident') !== -1) {
+		var text = 'CoderBingeはInternet Explorerに対応していません。EdgeやChromeやFirefoxなどの別のブラウザをお使いください。\n';
+		text += 'CoderBinge do not support Internet Explorer. Please use other web browser such as Edge, Chrome or Firefox.';
+		alert(text);
+	}
+</script>
+
+
+
+
+		
+			<hr>
+			
+			
+			
+<div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/home?lang=en" data-a2a-title="CoderBinge">
+	<a class="a2a_button_facebook"></a>
+	<a class="a2a_button_twitter"></a>
+	
+		<a class="a2a_button_telegram"></a>
+	
+	<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+		
+		<script async src="//static.addtoany.com/menu/page.js"></script>
+		
+	</div> 
+	<hr>
+</div> 
+
+	<div class="container" style="margin-bottom: 80px;">
+			<footer class="footer">
+			
+			<ul>
+				<li>Terms of service</li>
+				<li>Privacy Policy</li>
+				<li>Information Protection Policy</li>
+				<li>Company</li>
+				<li>FAQ</li>
+				<li>Contact</li>
+				
+			</ul>
+			<div class="text-center">
+					<small id="copyright">Copyright Since 2020 &copy;CoderBinge All rights reserved.</small>
+			</div>
+			</footer>
+	</div>
+	<p id="fixed-server-timer" ></p>
+	<div id="scroll-page-top" style="display:none;"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Page Top</div>
+
+</body>
+</html>
+
+
+
